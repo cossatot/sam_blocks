@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "sam_geol_slip_rates",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "dextral_rate": 0.0, "dextral_err": 0.0, "extension_rate": -0.25, "extension_err": 0.05, "source": "Rimando et al. 2021 Tectonics", "notes": "site Q2", "fault_seg": null, "include": false }, "geometry": { "type": "Point", "coordinates": [ -67.48653, -31.33647 ] } },
+{ "type": "Feature", "properties": { "dextral_rate": 0.0, "dextral_err": 0.0, "extension_rate": -0.16, "extension_err": 0.1, "source": "Rothis et al. 2019 JSAES", "notes": null, "fault_seg": null, "include": false }, "geometry": { "type": "Point", "coordinates": [ -67.48653, -31.33647 ] } },
+{ "type": "Feature", "properties": { "dextral_rate": null, "dextral_err": null, "extension_rate": -0.8, "extension_err": 0.4, "source": "Rockwell et a. 2014 BSSA", "notes": "uncertainty as half of measured rate", "fault_seg": null, "include": false }, "geometry": { "type": "Point", "coordinates": [ -68.497474966730337, -31.348348419394309 ] } },
+{ "type": "Feature", "properties": { "dextral_rate": null, "dextral_err": null, "extension_rate": -1.53, "extension_err": 0.26, "source": "Costa et al. 2015 Tectonophysics", "notes": "rate from mean shortening rate (trishear)", "fault_seg": null, "include": false }, "geometry": { "type": "Point", "coordinates": [ -68.984849504484899, -32.118498797956597 ] } }
+]
+}
