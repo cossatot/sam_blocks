@@ -17,34 +17,35 @@ save_results = true
 # load data
 
 # cca
-cca_block_file = "/home/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_blocks.geojson"
-cca_fault_file = "/home/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_faults.geojson"
-cca_slip_rates_file = "/home/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_geol_slip_rates.geojson"
+cca_block_file = "/Users/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_blocks.geojson"
+cca_fault_file = "/Users/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_faults.geojson"
+cca_slip_rates_file = "/Users/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_geol_slip_rates.geojson"
 
-ant_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/ant_slab2.geojson"
-cam_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/cam_slab2_fine.geojson"
+ant_tris_file = "/Users/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/ant_slab2.geojson"
+cam_tris_file = "/Users/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/cam_slab2_fine.geojson"
 
-cca_bounds_file = "/home/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_block_bounds.geojson"
-cca_nsam_bounds_file = "/home/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_nsam_block_bounds.geojson"
+cca_bounds_file = "/Users/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_block_bounds.geojson"
+cca_nsam_bounds_file = "/Users/itchy/research/geodesy/global_block_comps/cca_blocks/block_data/cca_nsam_block_bounds.geojson"
 
 # sam
-sam_block_file ="/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/sam_blocks.geojson"
-sam_fault_file ="/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/sam_faults.geojson"
-nsam_tris_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/nsam_tris.geojson"
-sam_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/sam_slab2_60.geojson"
-sam_bounds_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/sam_block_bounds.geojson"
-mora_vels_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/mora_vels.geojson"
-weiss_vels_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/weiss_vels.geojson"
-mcfarland_vels_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/mcfarland_vels.geojson"
-villegas_lanza_vels_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/vill_vels.geojson"
+sam_block_file ="/Users/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/sam_blocks.geojson"
+sam_fault_file ="/Users/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/sam_faults.geojson"
+nsam_tris_file = "/Users/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/nsam_tris.geojson"
+sam_tris_file = "/Users/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/sam_slab2_60.geojson"
+sam_bounds_file = "/Users/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/sam_block_bounds.geojson"
+mora_vels_file = "/Users/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/mora_vels.geojson"
+weiss_vels_file = "/Users/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/weiss_vels.geojson"
+mcfarland_vels_file = "/Users/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/mcfarland_vels.geojson"
+villegas_lanza_vels_file = "/Users/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/vill_vels.geojson"
 
 # glo
-glo_block_file = "/home/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_plates.geojson"
-glo_fault_file = "/home/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_faults.geojson"
-glo_slip_rates_file = "/home/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_slip_rates.geojson"
-gsrm_vels_file = "/home/itchy/research/geodesy/gsrm/gps/gps_sa.geojson"
-midas_vels_file = "/home/itchy/research/cascadia/cascadia_blocks/data/midas_vels.geojson"
-garnier_vels_file = "/home/itchy/research/geodesy/global_block_comps/cca_blocks/geod_data/garnier_et_al_2022_vels_igs08.geojson"
+glo_block_file = "/Users/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_plates.geojson"
+glo_fault_file = "/Users/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_faults.geojson"
+glo_slip_rates_file = "/Users/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_slip_rates.geojson"
+#gsrm_vels_file = "/Users/itchy/research/geodesy/gsrm/gps/gps_sa.geojson"
+gsrm_vels_file = "/Users/itchy/research/geodesy/global_block_comps/global_scale_plates/gps_itrf08.geojson"
+midas_vels_file = "/Users/itchy/research/geodesy/global_block_comps/global_scale_plates/midas_igs14_vels_trimmed.geojson"
+garnier_vels_file = "/Users/itchy/research/geodesy/global_block_comps/cca_blocks/geod_data/garnier_et_al_2022_vels_igs08.geojson"
 
 
 @info "joining blocks"
@@ -69,39 +70,6 @@ bound_df = Oiler.IO.gis_vec_file_to_df(sam_bounds_file)
 block_df = Oiler.IO.get_blocks_in_bounds!(block_df, bound_df; epsg=3995)
 println("n blocks after ", size(block_df, 1))
 
-@info "doing faults"
-fault_df, faults, fault_vels = Oiler.IO.process_faults_from_gis_files(
-                                            cca_fault_file,
-                                            sam_fault_file,
-                                            glo_fault_file;
-                                            block_df=block_df,
-                                            subset_in_bounds=true,
-                                            #usd_default=1.,
-                                            #lsd_default=4.,
-                                            e_default=10.,
-                                            #fid_drop="ccaf002",
-                                            )
-
-println("n faults: ", length(faults))
-println("n fault vels: ", length(fault_vels))
-
-
-@info "doing geologic slip rates"
-glo_slip_rate_df = Oiler.IO.gis_vec_file_to_df(glo_slip_rates_file)
-cca_slip_rate_df = Oiler.IO.gis_vec_file_to_df(cca_slip_rates_file)
-
-geol_slip_rate_df = vcat(glo_slip_rate_df,
-                         cca_slip_rate_df,
-                         )
-
-geol_slip_rate_df, geol_slip_rate_vels = Oiler.IO.make_geol_slip_rate_vels!(
-                                            geol_slip_rate_df,
-                                            fault_df;
-                                            weight=geol_slip_rate_weight
-                                            )
-
-println("n geol slip rates: ", length(geol_slip_rate_vels))
-
 @info "doing GNSS"
 gsrm_vel_df = Oiler.IO.gis_vec_file_to_df(gsrm_vels_file)
 midas_vel_df = Oiler.IO.gis_vec_file_to_df(midas_vels_file)
@@ -111,12 +79,20 @@ weiss_vel_df = Oiler.IO.gis_vec_file_to_df(weiss_vels_file)
 mcfarland_vel_df = Oiler.IO.gis_vec_file_to_df(mcfarland_vels_file)
 vill_vel_df = Oiler.IO.gis_vec_file_to_df(villegas_lanza_vels_file)
 
+rename!(midas_vel_df, Dict(:site => :station))
 gsmd_vel_df = vcat(gsrm_vel_df, midas_vel_df, cols=:union)
 
+
+
 @time gsmd_vels = Oiler.IO.make_vels_from_gnss_and_blocks(gsmd_vel_df, block_df;
-    fix="1111", epsg=102016,
+    fix="igs08", epsg=102016,
     ve=:e_vel, vn=:n_vel, ee=:e_err, en=:n_err, name=:station
 )
+
+#@time midas_vels = Oiler.IO.make_vels_from_gnss_and_blocks(midas_vel_df, block_df;
+#    fix="igs14", epsg=102016,
+#    ve=:e_vel, vn=:n_vel, ee=:e_err, en=:n_err, name=:station
+#)
 
 @time garn_vels = Oiler.IO.make_vels_from_gnss_and_blocks(garn_vel_df, block_df;
     fix="igs08", epsg=102016,
@@ -141,7 +117,7 @@ gsmd_vel_df = vcat(gsrm_vel_df, midas_vel_df, cols=:union)
 
 @info " doing NAM-rel vels (Antarctica)"
 @time ant_vels = Oiler.IO.make_vels_from_gnss_and_blocks(gsmd_vel_df, ant_df;
-                                                           fix="1111",
+                                                           fix="igs08",
                                                            ve=:e_vel,
                                                            vn=:n_vel,
                                                            ee=:e_err,
@@ -152,6 +128,7 @@ gsmd_vel_df = vcat(gsrm_vel_df, midas_vel_df, cols=:union)
 @info "re-adding Antarctica to blocks"
 block_df = vcat(block_df, ant_df)
 gnss_vels = vcat(gsmd_vels, 
+                 #midas_vels,
                  garn_vels, 
                  mora_vels,
                  weis_vels,
@@ -161,6 +138,48 @@ gnss_vels = vcat(gsmd_vels,
                  )
 
 println("n gnss vels: ", length(gnss_vels))
+
+@info "doing faults"
+fault_df, faults, fault_vels = Oiler.IO.process_faults_from_gis_files(
+                                            cca_fault_file,
+                                            sam_fault_file,
+                                            glo_fault_file;
+                                            block_df=block_df,
+                                            subset_in_bounds=true,
+                                            #usd_default=1.,
+                                            #lsd_default=4.,
+                                            e_default=10.,
+                                            #fid_drop="ccaf002",
+                                            )
+
+println("n faults: ", length(faults))
+println("n fault vels: ", length(fault_vels))
+
+@info "doing non-fault block boundaries"
+non_fault_bounds = Oiler.IO.get_non_fault_block_bounds(block_df, faults)
+bound_vels = vcat(map(
+    x->Oiler.Boundaries.boundary_to_vels(x; ee=5.0, en=5.0),
+    non_fault_bounds)...)
+
+
+println("n non-fault-bound vels: ", length(bound_vels))
+
+
+@info "doing geologic slip rates"
+glo_slip_rate_df = Oiler.IO.gis_vec_file_to_df(glo_slip_rates_file)
+cca_slip_rate_df = Oiler.IO.gis_vec_file_to_df(cca_slip_rates_file)
+
+geol_slip_rate_df = vcat(glo_slip_rate_df,
+                         cca_slip_rate_df,
+                         )
+
+geol_slip_rate_df, geol_slip_rate_vels = Oiler.IO.make_geol_slip_rate_vels!(
+                                            geol_slip_rate_df,
+                                            fault_df;
+                                            weight=geol_slip_rate_weight
+                                            )
+
+println("n geol slip rates: ", length(geol_slip_rate_vels))
 
 @info "doing tris"
 ant_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(ant_tris_file))
@@ -203,7 +222,8 @@ println("n tris: ", length(tris))
 
 vels = vcat(fault_vels,
             gnss_vels,
-            geol_slip_rate_vels
+            geol_slip_rate_vels,
+            bound_vels,
             )
 
 println("n total vels: ", length(vels))
