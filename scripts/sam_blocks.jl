@@ -40,6 +40,7 @@ mora_vels_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/blo
 weiss_vels_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/weiss_vels.geojson"
 mcfarland_vels_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/mcfarland_vels.geojson"
 villegas_lanza_vels_file = "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/vill_vels.geojson"
+mariniere_vel_file =       "/home/itchy/research/geodesy/global_block_comps/sam_blocks/block_data/mariniere_2020_vels.csv"
 
 # glo
 glo_block_file = "/home/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_plates.geojson"
@@ -81,6 +82,7 @@ mora_vel_df = Oiler.IO.gis_vec_file_to_df(mora_vels_file)
 weiss_vel_df = Oiler.IO.gis_vec_file_to_df(weiss_vels_file)
 mcfarland_vel_df = Oiler.IO.gis_vec_file_to_df(mcfarland_vels_file)
 vill_vel_df = Oiler.IO.gis_vec_file_to_df(villegas_lanza_vels_file)
+mari_vel_df = Oiler.IO.gis_vec_file_to_df(mariniere_vel_file, lon=:longitude, lat=:latitude)
 
 rename!(midas_vel_df, Dict(:site => :station))
 gsmd_vel_df = vcat(gsrm_vel_df, midas_vel_df, cols=:union)
@@ -118,6 +120,11 @@ gsmd_vel_df = vcat(gsrm_vel_df, midas_vel_df, cols=:union)
     ve=:e_vel, vn=:n_vel, ee=:e_err, en=:n_err, name=:site,# cen=:corr,
 )
 
+@time mari_vels = Oiler.IO.make_vels_from_gnss_and_blocks(mari_vel_df, block_df;
+    fix="2222", epsg=102016,
+    ve=:ve, vn=:vn, ee=:se, en=:sn, name=:site,# cen=:corr,
+)
+
 @info " doing NAM-rel vels (Antarctica)"
 @time ant_vels = Oiler.IO.make_vels_from_gnss_and_blocks(gsmd_vel_df, ant_df;
                                                            fix="igs08",
@@ -138,6 +145,7 @@ gnss_vels = vcat(gsmd_vels,
                  mcfa_vels,
                  vill_vels,
                  ant_vels,
+                 mari_vels
                  )
 
 println("n gnss vels: ", length(gnss_vels))
@@ -151,7 +159,7 @@ fault_df, faults, fault_vels = Oiler.IO.process_faults_from_gis_files(
                                             subset_in_bounds=true,
                                             #usd_default=1.,
                                             #lsd_default=4.,
-                                            e_default=10.,
+                                            e_default=5.,
                                             #fid_drop="ccaf002",
                                             )
 
@@ -161,7 +169,7 @@ println("n fault vels: ", length(fault_vels))
 @info "doing non-fault block boundaries"
 non_fault_bounds = Oiler.IO.get_non_fault_block_bounds(block_df, faults)
 bound_vels = vcat(map(
-    x->Oiler.Boundaries.boundary_to_vels(x; ee=5.0, en=5.0),
+    x->Oiler.Boundaries.boundary_to_vels(x; ee=2.0, en=2.0),
     non_fault_bounds)...)
 
 
@@ -208,7 +216,7 @@ nazca_sam_pole = Oiler.PoleCart(
 sam_tris = Oiler.Utils.tri_priors_from_pole(sam_tris, nazca_sam_pole,
                                             locking_fraction=0.4,
                                             depth_adjust=true,
-                                            err_coeff=1e1)
+                                            err_coeff=1e0)
 
 
 tris = vcat(cam_tris,
@@ -242,9 +250,9 @@ tri_distance_weight = 5.
             elastic_floor=1e-5,
             tri_distance_weight=tri_distance_weight,
             regularize_tris=true,
-            tri_priors=false,
+            tri_priors=true,
             predict_vels=true,
-            pred_se=true,
+            pred_se=false,
             check_closures=false,
             check_nans=true,
             sparse_lhs=true,
@@ -261,7 +269,7 @@ Oiler.WebViewer.write_web_viewer(results=results, block_df=block_df,
 #                                           geol_slip_rate_vels=geol_slip_rate_vels,
 #                                           fault_df=fault_df)
 
-map_fig = Oiler.Plots.plot_results_map(results, vel_groups, faults, tris)
+map_fig = Oiler.Plots.plot_results_map(results, vel_groups, faults, tris; tri_rate=:dip_slip_rate)
 #rates_fig = Oiler.Plots.plot_slip_rate_fig(geol_slip_rate_df, 
 #                                           geol_slip_rate_vels, 
 #                                           fault_df, results)
