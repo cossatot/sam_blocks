@@ -282,7 +282,9 @@ if save_results == true
                                      name="cca and ant tri results")
     Oiler.IO.write_fault_results_to_gj(results,
                                        "../results/sam_cca_faults.geojson",
-                                       name="sam_cca_faults")
+                                       name="sam_cca_faults",
+                                       calc_rake=true,
+                                       calc_slip_rate=true)
     Oiler.IO.write_gnss_vel_results_to_csv(results, vel_groups;
                                        name="../results/sam_cca_gnss_results.csv")
 end
